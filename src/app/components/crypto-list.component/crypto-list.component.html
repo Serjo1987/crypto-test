@@ -1,0 +1,17 @@
+<div class="crypto">
+  <span *ngIf="!onView">Wait, loading data...</span>
+
+  <div *ngIf="onView" class="crypto-list">
+    <div *ngIf="!crypto">
+      <span>Server connection error, try again</span>
+      <button (click)="update()">Update</button>
+    </div>
+
+    <div *ngIf="crypto" class="crypto-data">
+      <div *ngFor="let crpt of crypto" class="crypto-info">
+        <h3>{{ crpt.CoinInfo.FullName }} ({{ crpt.CoinInfo.Name }})</h3>
+        <p>Price ({{ crpt.RAW.USD.TOSYMBOL }}): <b>{{ crpt.RAW.USD.PRICE }}</b></p>
+      </div>
+    </div>
+  </div>
+</div>

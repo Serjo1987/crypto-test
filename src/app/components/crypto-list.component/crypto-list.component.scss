@@ -1,0 +1,21 @@
+.crypto {
+  min-width: 300px;
+  max-width: 1024px;
+  border: 1px solid black;
+  height: 100%;
+  margin: 30px auto;
+
+  .crypto-list {
+    button { margin-left: 10px; }
+
+    .crypto-data {
+      .crypto-info {
+        padding: 20px;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid black;
+        }
+      }
+    }
+  }
+}
